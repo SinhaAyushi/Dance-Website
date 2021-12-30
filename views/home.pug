@@ -1,0 +1,35 @@
+extends base.pug
+
+block script 
+    script(src="/static/index.js")
+
+block style
+    style
+      include ../static/style.css
+
+block content 
+    section#introSection
+        h1 Pratik's Dance Academy
+        p Dance Your Soul Away.
+
+    section#missionsection
+        h1 Dance Styles
+        div.cards
+          div#card
+            a(href="/") 
+              img(src="../static/ballroom.jpg",alt="")
+              p Ballroom
+          div#card
+            a(href="/classinfo")
+              img(src="../static/hip-hop.jpg", alt="hip hop image")          
+              p Hip Hop
+          div#card
+            a(href="/") 
+              img(src="../static/jazz.jpg", alt="jazz image")
+              p Jazz
+          div#card
+            a(href="/") 
+              img(src="../static/contemporary.jpg", alt="contemporary image")
+              p Contemporary
+    section#sponsersSection
+        h1 Our Sponsers

@@ -1,0 +1,63 @@
+//- index.pug
+doctype html
+html
+  head
+    style
+      include ../static/formstyle.css
+  body
+    nav#navbar
+        ul 
+            a(href="/")#logo
+              |Dance
+            li #[a(href="/") Home]
+            li #[a(href="/classinfo") Class info]
+            li #[a(href="/contact") Contact Us]
+    .container
+        h1 Hurry Up fill out this Form!
+        form(action='/' method='POST')
+          input(type='text' name='name' placeholder='Enter your Name')
+          input(type='number' name='age' placeholder='Enter your Age')
+          .gender
+            | Gender:
+            input(type="radio", name="gender" )
+            |Male 
+            input(type="radio" name="gender")
+            |Female 
+            input(type="radio" name="gender")
+            |Other
+          textarea#addresss(name='address' cols='80' rows='3' placeholder='Enter your Adress')
+          textarea#addresss(name='more' cols='80' rows='3' placeholder='Tell us about yourself')
+          button(value='Submit') Submit
+    footer#footer 
+      div.footertop
+        div.about
+          h3 About Us
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quaerat saepe quod corporis odio sapiente animi quos suscipit ipsa architecto, in maxime veniam optio iure.
+        div.Catergory
+          h3 Dance Categories
+          ul
+            a(href="classinfo") 
+              li Contemporary
+              li Hip-Hop
+              li Jazz
+              li Ballroom
+              li Salsa
+        div.links
+          h3 Quick Links
+          ul
+            a(href="/contact")  
+              li Contact Us
+            a(href="/") 
+              li Privacy Policy
+            a(href="/") 
+              li Site Map 
+            a(href="/") 
+              li Contribute
+      hr
+      div.footerbottom 
+        div.copyrights 
+          |Copyright © 2020 |All right reserved to Pratik Kumar
+          div.follow 
+            img(src="../static/follow1.png", alt="Follow Us")
+    script
+      include ../static/index.js
